@@ -15,6 +15,7 @@ data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 app.title = "Avocado Analytics: Understand Your Avocados!"
 
 app.layout = html.Div(
